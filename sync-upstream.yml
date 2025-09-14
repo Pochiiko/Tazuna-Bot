@@ -1,7 +1,7 @@
 name: Sync upstream → main
 on:
   schedule:
-    - cron: '0 0 * * *'   # hourly; adjust as you like
+    - cron: '/1 * * *'   # hourly; adjust as you like
   workflow_dispatch:      # allow manual "Run workflow" from Actions tab
 
 jobs:
