@@ -1,8 +1,6 @@
 services:
   tazuna:
-    build:
-      context: .
-      pull_policy: build
+    build: .
     container_name: tazuna
     # No env_file here — we'll inject secrets from Portainer UI
     environment:
