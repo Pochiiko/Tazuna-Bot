@@ -1,6 +1,9 @@
 services:
   tazuna:
-    build: .
+    build: 
+      context: .
+      args:
+        - CACHE_BUST=${CACHE_BUST}
     container_name: tazuna
     # No env_file here — we'll inject secrets from Portainer UI
     environment:
