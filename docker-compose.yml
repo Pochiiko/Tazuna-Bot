@@ -1,7 +1,9 @@
 version: "3.8"
 services:
   tazuna:
-    build: .
+    build:
+      context: .
+      pull_policy: build
     container_name: tazuna
     # No env_file here — we'll inject secrets from Portainer UI
     environment:
