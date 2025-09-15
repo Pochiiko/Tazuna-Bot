@@ -18,4 +18,4 @@ services:
     # If you later use Google Sheets features, mount your service-account key (kept off-repo):
     # volumes:
     #   - /opt/tazuna/credentials.json:/app/assets/credentials.json:ro
-# auto-update-timestamp: 20250915044106
+# auto-update-timestamp: 20250915045111
