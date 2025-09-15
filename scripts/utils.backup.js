@@ -1,62 +1,34 @@
 import 'dotenv/config';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const skillCategoryEmotes = {
-  speed: '<:SkillSpeed:1409363964596322314>',
-  speednegative: '<:SkillSpeedNegative:1417082428362854411>',
-  stamina: '<:SkillStamina:1409353481248182423>',
-  staminanegative: '<:SkillStaminaNegative:1417082434784329778>',
-  power: '<:SkillPower:1409353468455686225>',
-  powernegative: '<:SkillPowerNegative:1417082387027984495>',
-  guts: '<:SkillGuts:1409365192806236170>',
-  gutsnegative: '<:SkillGutsNegative:1417082380077764688>',
-  gate: '<:SkillGate:1409374560243028081>',
-  gatenegative: '<:SkillGateNegative:1417082292224131092>',
-  super7: '<:SkillSuper7:1409374543637905530>',
-  goldensuper7: '<:SkillGoldenSuper7:1417082365603483740>',
-  recovery: '<:SkillRecovery:1409363977900654736>',
-  goldenrecovery: '<:SkillRecoveryGolden:1409364361633464483>',
-  rainbowrecovery: '<:SkillRainbowAccel:1417082394795839590>',
-  recoverynegative: '<:SkillRecoveryNegative:1417082421425213450>',
-  recoveryspecial: '<:SkillRecovery:1409363977900654736>', // new one needed
-  goldenrecoveryspecial: '<:SkillRecoveryGolden:1409364361633464483>', // new one needed
-  velocity: '<:SkillVelocity:1409375756429037608>',
-  goldenvelocity: '<:SkillGoldenVelocity:1417082372804968448>',
-  rainbowvelocity: '<:SkillRainbowVelocity:1417082413364019331>',
-  velocitynegative: '<:SkillVelocityNegative:1417082441880961085>',
-  velocityspecial: '<:SkillVelocity:1409375756429037608>', // new one needed
-  goldenvelocityspecial: '<:SkillGoldenVelocity:1417082372804968448>', // new one needed
-  accel: '<:SkillFlow:1417082282560192522>',
-  goldenaccel: '<:SkillGoldenAccel:1417082310628606053>',
-  rainbowaccel: '<:SkillRainbowAccel:1417082394795839590>',
-  accelnegative: '<:SkillAccelNegative:1410390629085769731>',
-  accelspecial: '<<:SkillAccel:1417082264772415488>', // new one needed
-  goldenaccelspecial: '<:SkillGoldenAccel:1417082310628606053>', // new one neede
-  flow: '<:SkillFlow:1417082282560192522>',
-  goldenflow: '<:SkillGoldenFlow:1417082357273460776>',
-  wisdom: '<:SkillWisdom:1409317127567052925>',
-  velocitydebuff: '<:SkillDebuff:1417078648648892467>',
-  goldenvelocitydebuff: '<:SkillGoldenDebuff:1417082347861577758>',
-  acceldebuff: '<:SkillDebuff:1416217031040045197>',
-  goldenacceldebuff: '<:SkillGoldenAccel:1417082310628606053>',
-  recoverydebuff: '<:SkillDebuff:1416217031040045197>',
-  goldenrecoverydebuff: '<:SkillGoldenDebuff:1417082347861577758>',
-  visiondebuff: '<:SkillDebuff:1416217031040045197>',
-  goldenvisiondebuff: '<:SkillGoldenDebuff:1417082347861577758>',
-  frenzy: '<:SkillDebuff:1416217031040045197>',
-  default: '✨' // fallback
-};
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-const rankCategoryEmotes = {
-  A: '<:Rank_A:1417082193066594364>',
-  B: '<:Rank_B:1417082201601998879>',
-  C: '<:Rank_C:1417082210569293926>',
-  D: '<:Rank_D:1417082219024879677>',
-  E: '<:Rank_E:1417082226612375632>',
-  F: '<:Rank_F:1417082237903441950>',
-  G: '<:Rank_G:1417082246665605130>',
-  S: '<:Rank_S:1417082254638846016>',
-  default: '❓' // fallback
-};
+let skillCategoryEmotes = {};
+try {
+  const filePath = path.join(__dirname, '..', 'assets', 'skillemotes.json');
+  skillCategoryEmotes = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+} catch (err) {
+  console.warn("No skillemotes.json found, using default fallback.");
+  skillCategoryEmotes = {
+    default: '✨'
+  };
+}
+
+export { skillCategoryEmotes };
+  const rankCategoryEmotes = {
+    A: '<:Rank_A:1417082193066594364>',
+    B: '<:Rank_B:1417082201601998879>',
+    C: '<:Rank_C:1417082210569293926>',
+    D: '<:Rank_D:1417082219024879677>',
+    E: '<:Rank_E:1417082226612375632>',
+    F: '<:Rank_F:1417082237903441950>',
+    G: '<:Rank_G:1417082246665605130>',
+    S: '<:Rank_S:1417082254638846016>',
+    default: '❓' // fallback
+  };
 
 const raceGradeIcons = {
   G1: 'https://gametora.com/images/umamusume/race_ribbons/utx_txt_grade_ribbon_05.png',
@@ -155,7 +127,7 @@ function getCardTypeImageLink(str) {
 export function getCustomEmoji(str) {
   if (str === 'speed')
   {
-    return { "id": "1417162109590048930", "name": "Speed" };
+    return { "id": "1417161865666101432", "name": "Speed" };
   }
   else if (str === 'stamina')
   {
