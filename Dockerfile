@@ -1,10 +1,19 @@
-FROM node:20-bookworm-slim
-RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates \
-  && rm -rf /var/lib/apt/lists/*
+# Use alpine nodejs image for smaller images
+FROM node:alpine3.22
+
+# Update apk repo, install git and some other things 
+RUN apk update
+RUN apk add nano curl
+
+# Standard working directory
 WORKDIR /app
-COPY package*.json ./
-RUN npm ci --omit=dev
+
+# Pull git repo
 COPY . .
-ENV NODE_ENV=production
-EXPOSE 3000
-CMD ["node", "app.js"]
+
+# Install deps
+RUN npm i
+
+# Entrypoint
+
+ENTRYPOINT ["npm", "run", "start"]

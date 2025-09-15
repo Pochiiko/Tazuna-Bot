@@ -1122,4 +1122,5 @@ async function sendFollowup(token, payload) {
 
 app.listen(PORT, () => {
   console.log('Listening on port', PORT);
+  console.log('This message will disappear on the next sync')
 });

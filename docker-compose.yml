@@ -1,21 +1,14 @@
 services:
-  tazuna:
-    build: 
-      context: .
-      args:
-        - CACHE_BUST=${CACHE_BUST}
-    container_name: tazuna
-    # No env_file here — we'll inject secrets from Portainer UI
+  app:
+    image: ghcr.io/pochiiko/tazuna:latest
+    container_name: tazuna-bot
     environment:
-      NODE_ENV: "production"
-      PORT: "3000"
-      DISCORD_TOKEN: "${DISCORD_TOKEN}"
-      PUBLIC_KEY: "${PUBLIC_KEY}"
-      APP_ID: "${APP_ID}"
+      - APP_ID=${APP_ID}
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - PUBLIC_KEY=${PUBLIC_KEY}
     ports:
       - "3000:3000"
+#   volumes:
+#     - .:/app
+#     - /app/node_modules
     restart: unless-stopped
-    # If you later use Google Sheets features, mount your service-account key (kept off-repo):
-    # volumes:
-    #   - /opt/tazuna/credentials.json:/app/assets/credentials.json:ro
-# auto-update-timestamp: 20250915054150
