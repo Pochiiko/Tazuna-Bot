@@ -1,0 +1,14 @@
+services:
+  app:
+    image: ghcr.io/pochiiko/tazuna:latest
+    container_name: tazuna-bot
+    environment:
+      - APP_ID=${APP_ID}
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - PUBLIC_KEY=${PUBLIC_KEY}
+    ports:
+      - "3000:3000"
+#   volumes:
+#     - .:/app
+#     - /app/node_modules
+    restart: unless-stopped
