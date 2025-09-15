@@ -27,6 +27,7 @@ jobs:
           git push origin HEAD:main
   build-container:
     needs: sync
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout updated code from this fork
         uses: actions/checkout@v4
