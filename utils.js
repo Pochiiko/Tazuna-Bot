@@ -2,59 +2,59 @@ import 'dotenv/config';
 
 const skillCategoryEmotes = {
   speed: '<:SkillSpeed:1409363964596322314>',
-  speednegative: '<:SkillSpeedNegative:1410385256317714573>',
+  speednegative: '<:SkillSpeedNegative:1417082428362854411>',
   stamina: '<:SkillStamina:1409353481248182423>',
-  staminanegative: '<:SkillStaminaNegative:1410385267193417749>',
+  staminanegative: '<:SkillStaminaNegative:1417082434784329778>',
   power: '<:SkillPower:1409353468455686225>',
-  powernegative: '<:SkillPowerNegative:1410385277821780068>',
+  powernegative: '<:SkillPowerNegative:1417082387027984495>',
   guts: '<:SkillGuts:1409365192806236170>',
-  gutsnegative: '<:SkillGutsNegative:1410385700578398218>',
+  gutsnegative: '<:SkillGutsNegative:1417082380077764688>',
   gate: '<:SkillGate:1409374560243028081>',
-  gatenegative: '<:SkillGateNegative:1410385710598324274>',
+  gatenegative: '<:SkillGateNegative:1417082292224131092>',
   super7: '<:SkillSuper7:1409374543637905530>',
-  goldensuper7: '<:SkillGoldenSuper7:1410387575868362763>',
+  goldensuper7: '<:SkillGoldenSuper7:1417082365603483740>',
   recovery: '<:SkillRecovery:1409363977900654736>',
   goldenrecovery: '<:SkillRecoveryGolden:1409364361633464483>',
-  rainbowrecovery: '<:SkillRainbowRecovery:1410386721090175177>',
-  recoverynegative: '<:SkillRecoveryNegative:1410386734176272460>',
+  rainbowrecovery: '<:SkillRainbowAccel:1417082394795839590>',
+  recoverynegative: '<:SkillRecoveryNegative:1417082421425213450>',
   recoveryspecial: '<:SkillRecovery:1409363977900654736>', // new one needed
   goldenrecoveryspecial: '<:SkillRecoveryGolden:1409364361633464483>', // new one needed
   velocity: '<:SkillVelocity:1409375756429037608>',
-  goldenvelocity: '<:SkillGoldenVelocity:1410390264593387530>',
-  rainbowvelocity: '<:SkillRainbowVelocity:1410390277419700373>',
-  velocitynegative: '<:SkillVelocityNegative:1410390388249858169>',
+  goldenvelocity: '<:SkillGoldenVelocity:1417082372804968448>',
+  rainbowvelocity: '<:SkillRainbowVelocity:1417082413364019331>',
+  velocitynegative: '<:SkillVelocityNegative:1417082441880961085>',
   velocityspecial: '<:SkillVelocity:1409375756429037608>', // new one needed
-  goldenvelocityspecial: '<:SkillGoldenVelocity:1410390264593387530>', // new one needed
-  accel: '<:SkillAccel:1410383762990039040>',
-  goldenaccel: '<:SkillGoldenAccel:1411128241619468299>',
-  rainbowaccel: '<:SkillRainbowAccel:1411128260313747557>',
+  goldenvelocityspecial: '<:SkillGoldenVelocity:1417082372804968448>', // new one needed
+  accel: '<:SkillFlow:1417082282560192522>',
+  goldenaccel: '<:SkillGoldenAccel:1417082310628606053>',
+  rainbowaccel: '<:SkillRainbowAccel:1417082394795839590>',
   accelnegative: '<:SkillAccelNegative:1410390629085769731>',
-  accelspecial: '<:SkillAccel:1410383762990039040>', // new one needed
-  goldenaccelspecial: '<:SkillGoldenAccel:14103906061462246500>', // new one neede
-  flow: '<:SkillFlow:1412668553236185180>',
-  goldenflow: '<:SkillGoldenFlow:1412668565416575118>',
+  accelspecial: '<<:SkillAccel:1417082264772415488>', // new one needed
+  goldenaccelspecial: '<:SkillGoldenAccel:1417082310628606053>', // new one neede
+  flow: '<:SkillFlow:1417082282560192522>',
+  goldenflow: '<:SkillGoldenFlow:1417082357273460776>',
   wisdom: '<:SkillWisdom:1409317127567052925>',
   velocitydebuff: '<:SkillDebuff:1417078648648892467>',
-  goldenvelocitydebuff: '<:SkillGoldenDebuff:1416217043023302656>',
+  goldenvelocitydebuff: '<:SkillGoldenDebuff:1417082347861577758>',
   acceldebuff: '<:SkillDebuff:1416217031040045197>',
-  goldenacceldebuff: '<:SkillGoldenDebuff:1416217043023302656>',
+  goldenacceldebuff: '<:SkillGoldenAccel:1417082310628606053>',
   recoverydebuff: '<:SkillDebuff:1416217031040045197>',
-  goldenrecoverydebuff: '<:SkillGoldenDebuff:1416217043023302656>',
+  goldenrecoverydebuff: '<:SkillGoldenDebuff:1417082347861577758>',
   visiondebuff: '<:SkillDebuff:1416217031040045197>',
-  goldenvisiondebuff: '<:SkillGoldenDebuff:1416217043023302656>',
+  goldenvisiondebuff: '<:SkillGoldenDebuff:1417082347861577758>',
   frenzy: '<:SkillDebuff:1416217031040045197>',
   default: '✨' // fallback
 };
 
 const rankCategoryEmotes = {
-  A: '<:RankA:1412694937203511336>',
-  B: '<:RankB:1412694961358372894>',
-  C: '<:RankC:1412694982363578450>',
-  D: '<:RankD:1412695001825284198>',
-  E: '<:RankE:1412695032137257040>',
-  F: '<:RankF:1412695050969681982>',
-  G: '<:RankG:1412695075271475212>',
-  S: '<:RankS:1412695122784551033>',
+  A: '<:Rank_A:1417082193066594364>',
+  B: '<:Rank_B:1417082201601998879>',
+  C: '<:Rank_C:1417082210569293926>',
+  D: '<:Rank_D:1417082219024879677>',
+  E: '<:Rank_E:1417082226612375632>',
+  F: '<:Rank_F:1417082237903441950>',
+  G: '<:Rank_G:1417082246665605130>',
+  S: '<:Rank_S:1417082254638846016>',
   default: '❓' // fallback
 };
 
