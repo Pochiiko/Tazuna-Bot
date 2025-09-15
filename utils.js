@@ -34,7 +34,7 @@ const skillCategoryEmotes = {
   flow: '<:SkillFlow:1412668553236185180>',
   goldenflow: '<:SkillGoldenFlow:1412668565416575118>',
   wisdom: '<:SkillWisdom:1409317127567052925>',
-  velocitydebuff: '<:SkillDebuff:1416217031040045197>',
+  velocitydebuff: '<:SkillDebuff:1417078648648892467>',
   goldenvelocitydebuff: '<:SkillGoldenDebuff:1416217043023302656>',
   acceldebuff: '<:SkillDebuff:1416217031040045197>',
   goldenacceldebuff: '<:SkillGoldenDebuff:1416217043023302656>',
