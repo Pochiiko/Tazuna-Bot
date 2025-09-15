@@ -18,17 +18,17 @@ try {
 }
 
 export { skillCategoryEmotes };
-const rankCategoryEmotes = {
-  A: '<:Rank_A:1417082193066594364>',
-  B: '<:Rank_B:1417082201601998879>',
-  C: '<:Rank_C:1417082210569293926>',
-  D: '<:Rank_D:1417082219024879677>',
-  E: '<:Rank_E:1417082226612375632>',
-  F: '<:Rank_F:1417082237903441950>',
-  G: '<:Rank_G:1417082246665605130>',
-  S: '<:Rank_S:1417082254638846016>',
-  default: '❓' // fallback
-};
+  const rankCategoryEmotes = {
+    A: '<:Rank_A:1417082193066594364>',
+    B: '<:Rank_B:1417082201601998879>',
+    C: '<:Rank_C:1417082210569293926>',
+    D: '<:Rank_D:1417082219024879677>',
+    E: '<:Rank_E:1417082226612375632>',
+    F: '<:Rank_F:1417082237903441950>',
+    G: '<:Rank_G:1417082246665605130>',
+    S: '<:Rank_S:1417082254638846016>',
+    default: '❓' // fallback
+  };
 
 const raceGradeIcons = {
   G1: 'https://gametora.com/images/umamusume/race_ribbons/utx_txt_grade_ribbon_05.png',

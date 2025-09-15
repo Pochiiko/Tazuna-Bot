@@ -155,31 +155,31 @@ function getCardTypeImageLink(str) {
 export function getCustomEmoji(str) {
   if (str === 'speed')
   {
-    return { "id": "1409344810426564750", "name": "Speed" };
+    return { "id": "1417162109590048930", "name": "Speed" };
   }
   else if (str === 'stamina')
   {
-    return { "id": "1409340937137684551", "name": "Stamina" };
+    return { "id": "1417161854328901632", "name": "Stamina" };
   }
   else if (str === 'power')
   {
-    return { "id": "1409344836322070578", "name": "Power" };
+    return { "id": "1417161981906915549", "name": "Power" };
   }
   else if (str === 'wit')
   {
-    return { "id": "1409344858698551367", "name": "Wit" };
+    return { "id": "1417161842685378761", "name": "Wit" };
   }
   else if (str === 'guts')
   {
-    return { "id": "1409344879930249216", "name": "Guts" };
+    return { "id": "1417161971098189944", "name": "Guts" };
   }
   else if (str === 'friend')
   {
-    return { "id": "1409344903833452604", "name": "Friend" };
+    return { "id": "1417161813363265666", "name": "Friend" };
   }
   else if (str === 'group')
   {
-    return { "id": "1409344925103030315", "name": "Group" };
+    return { "id": "1417161824259801158", "name": "Group" };
   }
 }
 
